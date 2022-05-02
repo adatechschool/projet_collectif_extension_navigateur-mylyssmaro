@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Mario Background",
+    "version": "1.0",
+    "description": "Adding Mario in the background",
+    "icons": {
+        "16": "/images/Mario.png",
+        "48": "/images/Mario.png",
+        "128": "/images/Mario.png"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/*",
+                "https://*/*",
+                "https://www.lequipe.fr/*",
+                "http://www.lequipe.fr/*",
+                "http://www.google.com/*"
+            ],
+            "css": [
+                "main.css"
+            ]
+        }
+    ]
+}

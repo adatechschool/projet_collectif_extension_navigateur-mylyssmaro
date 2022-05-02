@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+
+.MBeuO {
+    font-family: 'Source Code Pro' !important;
+    font-size: 90px !important;
+    line-height: 26px;
+}
+
+html body {
+    background : grey;
+    opacity: 0.95;
+    font-family : 'Source Code Pro';
+}
+
+.Image__overContent[data-v-c4f4345e] {
+    background : black;
+    opacity: 0.1;
+}
+
+nav {
+    color : greenyellow;
+}
+
+h1 {
+    color : white;
+}
+
+h2 {
+    color : greenyellow;
+}
+
+.TeamScore__team {
+    background : black;
+}
+
+h3 {
+    text-decoration: none; 
+    color : white;
+    font-family : Source Code Pro;
+    font-size : 70px;
+}
+
+img {
+    border : 1px solid red;
+    /* margin : 3px; */
+    padding : 5px;
+    z-index : 1;
+    content : url('https://how-do-it.com/wp-content/uploads/2018/03/Grumpy-Cat-9.jpg');
+}
+
+
