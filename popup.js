@@ -1,10 +1,26 @@
 let btn = document.getElementById("thebutton");
 
-btn.addEventListener('click', () => {
-    let url = document.getElementById("inputuser").value;
-    document.getElementById('image').setAttribute("src", url);
+chrome.storage.sync.get("url", ({ url }) => {
+    let image = document.getElementById('image');
+    image.setAttribute("src", url);
 })
 
+btn.addEventListener('click', async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+        target: { tabId: tabId, allFrames: true },
+        function: injectURL,
+    });
+})
+
+async function injectURL() {
+    chrome.storage.sync.get("url", ({ url }) => {
+        url = document.getElementById("inputuser").value;
+        console.log(url);
+        document.getElementByTag('img').setAttribute("src", url);
+    });
+}
 // chrome.storage.sync.get("color", ({ color }) => {
 //   changeColor.style.backgroundColor = color;
 // });
@@ -28,4 +44,3 @@ btn.addEventListener('click', () => {
 //         let images = document.querySelectorAll('img');
 //         images.src = url;
 //     });
-// }

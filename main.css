@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
 
 .MBeuO {
     font-family: 'Source Code Pro' !important;
@@ -43,9 +43,9 @@ h3 {
 img {
     border : 1px solid red;
     /* margin : 3px; */
-    padding : 5px;
+    /* padding : 5px; */
     /* z-index : 1; */
-    content : url('https://how-do-it.com/wp-content/uploads/2018/03/Grumpy-Cat-9.jpg');  
-}
+    /* content : url('https://how-do-it.com/wp-content/uploads/2018/03/Grumpy-Cat-9.jpg');   */
+/* } */
 
 

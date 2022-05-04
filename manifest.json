@@ -8,12 +8,14 @@
         "48": "/images/Mario.png",
         "128": "/images/Mario.png"
     },
-    "background": {
-        "service_worker": "background.js"
-      },
-    "permissions": ["storage"],
+    "permissions": [
+        "storage"
+    ],
     "action": {
         "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
@@ -27,7 +29,7 @@
             "css": [
                 "main.css"
             ],
-            "js":[
+            "js": [
                 "background.js"
             ]
         }
