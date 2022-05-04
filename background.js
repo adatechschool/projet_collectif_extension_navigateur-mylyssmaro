@@ -1,9 +1,5 @@
-let url = ""
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.get({ url }); 
-  });
+let url = "https://how-do-it.com/wp-content/uploads/2018/03/Grumpy-Cat-9.jpg";
 
-let images = document.querySelectorAll("img");
-images.addEventListener("click", function(){
-    images.src = url;
-})
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ url });
+});
