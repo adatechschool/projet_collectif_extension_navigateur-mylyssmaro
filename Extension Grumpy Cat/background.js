@@ -5,6 +5,9 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log(`the url is ${url}`);
 });
 
+
+
+
 // chrome.action.onClicked.addListener(async (tab) => {
 //   chrome.scripting.executeScript({
 //       target: { tabId: tab.id },

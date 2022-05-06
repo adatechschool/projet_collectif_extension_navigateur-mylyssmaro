@@ -1,26 +1,37 @@
 
+const bouton = document.getElementById('example');
 chrome.storage.sync.get("url", ({ url }) => {
-  document.getElementById("example").style.backgroundImage = "url(" + url + ")";
+  bouton.style.backgroundImage = "url(" + url + ")";
 })
 
 
+console.log(document);
+console.log(window);
 
-async function changeImage () {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+bouton.addEventListener('click', () => {
+  console.log('click somewhere');
   const images = document.getElementsByTagName('img');
+  console.log(images);
+  change();
+})
+
+async function change() {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // console.log(images);
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function: changeImage,
-  });
+  }).catch((error) => {
+    console.log("error");
+  })
 };
-
 
 function changeImage(url) {
   chrome.storage.sync.get("url", ({ url }) => {
-  for (image of images) {
-    image.setAttribute("data-srcset", url);
-    image.setAttribute("src", url);
-    image.setAttribute("srcset", url);
-  }
+    for (image in images) {
+      image.setAttribute("data-srcset", url);
+      image.setAttribute("src", url);
+      image.setAttribute("srcset", url);
+    }
   });
 }

@@ -11,26 +11,19 @@
     "permissions": [
         "storage"
     ],
-    "action": {
-        "default_popup": "index.html"
-    },
     "background": {
         "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html"
     },
     "content_scripts": [
         {
             "matches": [
-                "https://www.google.com/*",
-                "https://*/*",
-                "https://www.lequipe.fr/*",
-                "http://www.lequipe.fr/*",
-                "http://www.google.com/*"
+                "<all_urls>"
             ],
             "css": [
                 "main.css"
-            ],
-            "js": [
-                "background.js"
             ]
         }
     ]

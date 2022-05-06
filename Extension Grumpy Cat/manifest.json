@@ -6,7 +6,7 @@
     "icons": {
         "16": "./images/logo-16.png",
         "48": "./images/logo-48.png",
-        "128":"./images/logo-128.png"
+        "128": "./images/logo-128.png"
     },
     "permissions": [
         "storage",
@@ -18,15 +18,5 @@
     },
     "background": {
         "service_worker": "background.js"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://*/*"
-            ],
-            "js": [
-                "popup.js"
-            ]
-        }
-    ]
+    }
 }
