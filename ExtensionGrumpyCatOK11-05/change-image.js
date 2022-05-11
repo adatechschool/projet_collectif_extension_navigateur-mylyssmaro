@@ -1,5 +1,3 @@
-console.log("coucou j'en ai plein le cou");
-
 let images = document.getElementsByTagName('img');
 
 chrome.storage.sync.get(["url"], function (result) {

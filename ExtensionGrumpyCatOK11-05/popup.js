@@ -19,7 +19,14 @@ submit_button.addEventListener("click", async () => {
     chrome.storage.sync.set({ url: result.url });
   });
 
+  let chaton = document.getElementById("chaton");
+  function playSound() {
+    chaton.play();
+  }
+
+
   bouton.addEventListener("click", async () => {
+    playSound();
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     chrome.scripting.executeScript({
       target: { tabId: tab.id },
